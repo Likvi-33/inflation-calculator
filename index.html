@@ -78,11 +78,13 @@
       }
 
       let result = amount * cumulative;
+      // final value is in EUR, no further conversion
       let final = result.toFixed(2) + " €";
 
       document.getElementById("output").textContent =
         `Reálna hodnota: ${final}`;
 
+      // amount is already adjusted for currency, no additional conversion
       let adjustedAmount = amount;
       calculateByPeriodFactors(start, end, adjustedAmount);
     }
